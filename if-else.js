@@ -109,12 +109,42 @@ checkPassword("password", "password")
 
 /*
     skriv två värden grade (number) dueDate (date)
+        ?dueDate deklareras med en initialt värde för att inte vara samma som idag tex "2023-12-10 23:59"
     Skriv en "conditional" som uppfyller nedan krav
     1.  om grade lägre än 60 console log IG
-    2.  om grade högre än eller lika med 60 och mindre än eller likamed 85 console log G
-    3.  om grade högre en 60 console log VG
+    2.  om grade högre än eller lika med 60 OCH mindre än eller likamed 85 console log G
+    3.  om grade högre en 85 console log VG
 
     1. om dueDate dag är mindre än idag dag console log sen inlämning
     2. om dueDate dag är större än idag dag console log inlämning
+    3. annars console log Sista minuten inlämning
 
 */
+
+// grade checker
+let grade = 87;
+
+if( grade < 60 ) {
+    console.log("IG")
+}
+else if( grade >= 60 && grade <= 85) {
+    console.log("G")
+}
+else if(grade > 85){
+    console.log("VG")
+} 
+
+//assignment due
+const dueDate = new Date("2023-12-6 23:59");
+
+if(dueDate.getDate() < today.getDate()) {
+    console.log("Sen inlämning")
+}
+else if(dueDate.getDate() > today.getDate()){
+    console.log("Inlämning")
+}
+else {
+    console.log("Sista minuten inlämning")
+}
+
+//Om ni fastnar på hur man får ut datum sök "JS get date from new Date()" på google och välj stackoverflow svar
