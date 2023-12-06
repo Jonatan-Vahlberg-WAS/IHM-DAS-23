@@ -49,11 +49,27 @@ switch(day) {
 
 //Choose product switch ska logga en produkt som passar för prefrence eller "Ingen produkt finns"
 
-function chooseProductSwitch(prefrence) {
-    
+function chooseProductSwitch(prefrence = "") {
+    console.log("PREFRENCE:", prefrence)
+    switch(prefrence) {
+        case "bra pris":
+            console.log("Produkt A")
+            break;
+        case "hög kvalitet":
+            console.log("Produkt B")
+            break;
+        case "hållbarhet":
+            console.log("Produkt C")
+            break;
+        default:
+            console.log("Ingen produkt finns")
+    }
 }
 
 chooseProductSwitch("bra pris") // Produkt A
 chooseProductSwitch("hög kvalitet") // Produkt B
 chooseProductSwitch("hållbarhet") // Produkt C
 chooseProductSwitch("utan gluten") // Ingen produkt finns
+chooseProductSwitch() // Ingen produkt finns
+chooseProductSwitch("Bra pris") // Produkt A
+
