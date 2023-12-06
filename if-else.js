@@ -105,9 +105,16 @@ checkPassword("", "password")
 checkPassword("password", "password")
 
 
+// TASK conditionals
 
+/*
+    skriv två värden grade (number) dueDate (date)
+    Skriv en "conditional" som uppfyller nedan krav
+    1.  om grade lägre än 60 console log IG
+    2.  om grade högre än eller lika med 60 och mindre än eller likamed 85 console log G
+    3.  om grade högre en 60 console log VG
 
+    1. om dueDate dag är mindre än idag dag console log sen inlämning
+    2. om dueDate dag är större än idag dag console log inlämning
 
-
-
-// is offtime
+*/
