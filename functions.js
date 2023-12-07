@@ -170,3 +170,26 @@ function showUserOnlineStatus(status = "Offline") {
 showUserOnlineStatus()
 
 // ANNOYMOUS functions
+
+let anonAdd = function(x,y) {
+    return x+y;
+}
+
+console.log("Anon add 2 params", anonAdd(1,1))
+
+anonAdd = function(x,y,z) {
+    return x+y+z
+}
+
+console.log("Anon add 3 params", anonAdd(1,1,1))
+
+
+// Arrow function / Fat Arrow function
+
+const getFirstLetter = (str = "lorem ipsum") => {
+    return str.charAt(0)
+}
+
+console.log("Get first letter", getFirstLetter())
+console.log("Get first letter", getFirstLetter("Jonatan Vahlberg"))
+
