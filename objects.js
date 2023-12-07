@@ -107,3 +107,60 @@ console.log(
     })
 )
 console.log("GARAGE CAR 2:", garage.car)
+
+
+
+//Optional Chaining
+
+
+const cheese = {
+    aged: 18,
+    origin: "Italy",
+    tasteProfile: "Salty"
+}
+
+const fridge = {
+    brand: "samsung",
+
+    specs: {
+        coolingAgent: "8127",
+    },
+    cheese: null,
+}
+// optional chaining ?
+console.log("GET CHESE TASTE PROFILE", fridge.cheese?.tasteProfile)
+
+fridge.cheese = cheese
+
+console.log("GET CHESE TASTE PROFILE", fridge.cheese.tasteProfile)
+
+const person1 = {
+    name: "Kalle",
+    child: {
+        name: "Kalle jr",
+        child: {
+            name: "Kalle den tredje",
+            child: null
+        }
+    }
+}
+
+
+const person2 = {
+    name: "Oscar",
+    child: {
+        name: "Oscar den andre"
+    }
+}
+
+console.log("GET grandchildren",
+    person1.name,
+    person1.child.name,
+    person1.child.child.name,
+)
+
+console.log("GET grandchildren",
+    person2.name,
+    person2.child?.name,
+    person2.child?.child?.name,
+)
