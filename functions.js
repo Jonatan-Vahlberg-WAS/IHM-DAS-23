@@ -13,7 +13,7 @@ call911()
 // Fucntions with arguments
 
 function add(x, y) {
-    console.log("X + Y:", x, y, x+y)
+    console.log(x, " + ", y + " = ", x+y)
 }
 
 // Calling the add function - add(1,4)
@@ -117,3 +117,56 @@ function getFromDatabase(url = DATABASE_URL, id = 0){
 console.log(getFromDatabase())
 console.log(getFromDatabase("http://nemo:8666"))
 console.log(getFromDatabase(undefined,10))
+
+
+// 1. Create a function that takes two arguments and divides them
+//SV: Skapa en funktion som tar två argument och dividerar dem
+function divide(x, y){
+    console.log(`${x} / ${y} = ${x/y}`)
+}
+
+divide(39, 27)
+divide(1, 5)
+divide(0, 0)
+divide("hello", "world")
+
+console.clear()
+// 2. Create a function that takes one food and returns a sentence with the food in it
+//SV: Skapa en funktion som tar en maträtt och returnerar en mening med maträtten i
+function getFavoriteDish(dish = "Pizza"){
+    return `My favorite dish is ${dish}`
+}
+console.log(
+    getFavoriteDish("Hamburger"),
+    getFavoriteDish(),
+    getFavoriteDish("Tacos")
+)
+
+// 3. Create a function that checks the users password and returns "Password is correct" or "Password is incorrect"
+//SV: Skapa en funktion som kollar användarens lösenord och returnerar "Lösenordet är korrekt" eller "Lösenordet är inkorrekt"
+function checkPassword(password = ""){
+    const passwordFromDatabase = "password1"; // MOCK accessed from database
+
+    if(password === passwordFromDatabase){
+        return "Password is correct"
+    }
+
+    return "Password is incorrect"
+}
+
+
+console.log(
+    checkPassword("pass"),
+    checkPassword("passWORD"),
+    checkPassword("password")
+)
+
+function showUserOnlineStatus(status = "Offline") {
+    const statusEl = document.createElement("p")
+    statusEl.textContent = `USER is ${status}`
+    document.body.appendChild(statusEl)
+}
+
+showUserOnlineStatus()
+
+// ANNOYMOUS functions
