@@ -69,3 +69,57 @@ console.log(handleFirstInCue(cue))
 console.log(handleFirstInCue(cue))
 console.log(handleFirstInCue(cue))
 
+
+
+const data = [1200, 400, 899, "ERROR", 782.5]
+console.log(data)
+
+//Splice
+
+//Splice for removal
+data.splice(3,1)
+console.log(data)
+
+//Splice for adding
+data.splice(3, 0, 239)
+console.log(data)
+
+//Splice for replace
+data.splice(4, 1, 782)
+console.log(data)
+
+//Concat
+
+let fruits = ["Apple", "Orange", "Bannana"]
+console.log(fruits)
+
+
+const vegetables = ["Tomato", "Carrot", "Potato"]
+
+const fruitsAndVegetables = fruits.concat(vegetables)
+
+console.log(fruitsAndVegetables)
+
+// Concat spread
+const fAV1 = [...vegetables, ...vegetables]
+console.log(fAV1)
+
+// reverse
+console.log(fruitsAndVegetables.reverse())
+
+// sort
+const sortedFruitsAndVegetables = fruitsAndVegetables.sort()
+
+console.log(sortedFruitsAndVegetables)
+console.log(data.sort())
+console.log(data.sort((a,b) => {
+    return b-a
+}))
+
+// slice
+const sortedData = data.sort((a,b) => {
+    return b-a
+})
+
+const thirdLargestData = sortedData.slice(0,3)
+console.log(thirdLargestData)
