@@ -107,6 +107,8 @@ console.log(hasSiblingsTernary())
 console.log(hasSiblingsShortest())
 
 // Functions with default arguments
+// Default argument should not come before non defaulted arguments
+
 const DATABASE_URL = "https://post.bin"
 function getFromDatabase(url = DATABASE_URL, id = 0){
     return `${url}/post/${id}`
