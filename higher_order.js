@@ -56,9 +56,9 @@ const firstLetters = newerFruits.map(fruit =>{
 console.log("Initial letters of fruits", firstLetters)
 
 const students = [
-    { name: "Kalle", id: 9002},
-    { name: "Bejamin", id: 922},
-    { name: "Rut", id: 7802},
+    { name: "Kalle", id: 9002, email: "kalle@ihm.se"},
+    { name: "Bejamin", id: 922, email: "beNjamin@ihm.se"},
+    { name: "Rut", id: 7802, email: "Rut@ihm.se"},
 ]
 console.log(students)
 
@@ -72,7 +72,47 @@ studentIds.forEach(id=> console.log("Send mail to", id))
 
 //1. From a array of numbers double each number and save it to a new array using map
 //SV: Från en array med nummer dubbla varje nummer och spara det i en ny array med hjälp av map
+const doubleNumbers = numbers.map((nr) => {
+    return nr * 2;
+})
+console.log("Doubled numbers", doubleNumbers)
 
 //2. from a array of strings create a new array with each string in uppercase using map
 //SV: från en array med strängar skapa en ny array med varje sträng i versaler med hjälp av map
 // hint. string.toUpperCase()
+const uppercaseFruits = newerFruits.map((fruit) => {
+    return fruit.toUpperCase();
+})
+console.log("Uppercase fruits", uppercaseFruits)
+
+
+const emails = [
+    "email1@email.com",
+    "email2@Email.com",
+    "email3@email.Com",
+    "eMail4@email.com",
+]
+console.log("Emails", emails)
+const lowercaseEmails = emails.map(email => email.toLowerCase())
+// const lowercaseEmails = emails.map((email) => {
+//     return email.toLowerCase()
+// })
+console.log("Emails in lower case", lowercaseEmails)
+
+const correctedStudentProfiles = students.map(student => {
+    return {
+        ...student,
+        email: student.email.toLowerCase()
+    }
+})
+console.log(correctedStudentProfiles)
+
+
+// FILTER
+
+
+//1. From a array of numbers filter out all numbers that are larger than 100
+
+//2. From a array of strings filter out all strings that are longer than 5 characters
+
+//3. From a array of students filter out all students that are not expelled
