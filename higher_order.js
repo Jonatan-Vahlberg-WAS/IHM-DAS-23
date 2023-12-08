@@ -11,4 +11,10 @@ newerFruits.forEach((fruit, i, arr) => {
 })
 console.log(newerReversedFruits)
 
+//1. Combine an array of numbers by adding them together through forEach
+//SV: Kombinera en array med nummer genom att lägga till dem tillsammans genom forEach 
+
+//2. Find the largest number in an array through forEach save it to a variable during the loop
+//SV: Hitta det största numret i en array genom forEach spara det i en variabel under loopen
+
 // MAP
