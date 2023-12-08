@@ -110,9 +110,23 @@ console.log(correctedStudentProfiles)
 
 // FILTER
 
+const lowNumbers = numbers.filter((nr) => {
+    return nr < 250
+})
+console.log("Only numbers under 250",lowNumbers)
+
+
+const studentsWithNameBeginingWithB = students.filter(student => {
+    return student.name.toLowerCase()[0] === "b"
+})
+console.log("Students with names staring with 'B'", studentsWithNameBeginingWithB)
+
+const inactiveStudentId = 9002
+const activeStudents = students.filter(student => {
+    return student.id !== inactiveStudentId;
+})
+console.log("Active students after filtering", activeStudents)
 
 //1. From a array of numbers filter out all numbers that are larger than 100
 
 //2. From a array of strings filter out all strings that are longer than 5 characters
-
-//3. From a array of students filter out all students that are not expelled
