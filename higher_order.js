@@ -153,9 +153,20 @@ if(student9001){
 
 //1. From a array of numbers find the first number that is larger than 100
 //SV: Från en array med nummer hitta det första numret som är större än 100
+const firstOver100 = numbers.find(nr => nr > 100)
+console.log("First number over 100", firstOver100)
 
 //2. find the spesific fruit "apple" regardless of case from a array of strings
 //SV: hitta den specifika frukten "apple" oavsett stor eller liten bokstav från en array med strängar
+// hint. string.toLowerCase()
+const apple2 = newerFruits.find(fruit => fruit.toLowerCase() === "apple")
 
 //3. search students for a student name Martin and if no student is found console.log "No student found"
 //SV: sök studenter efter ett studentnamn Martin och om ingen student hittas console.log "No student found"
+const studentMartin = students.find(student => student.name.toLowerCase() === "martin")
+if(studentMartin){
+    console.log("Student Martin", studentMartin)
+}
+else {
+    console.log("No student found")
+}
