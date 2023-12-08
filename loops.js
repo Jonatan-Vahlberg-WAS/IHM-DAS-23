@@ -57,13 +57,46 @@ while(true) {
 //hint. string[0] or string.charAt(0)
 //SV: Skapa en for-loop som tar det första bokstaven i varje array-element och console.logs det ut
 // hint. string [0] eller string.charAt (0)
+// hint2. example fruits[i][0]
+
+//a. create array of strings
+const newFruits = [...fruits]
+//b. loop trough strings
+for (let i = 0; i < newFruits.length; i++){
+    //c1. console log each string
+    console.log("Fruit", newFruits[i])
+    //c2 console log first char of string
+    console.log("Fruit first char", newFruits[i][0], newFruits[i].charAt(0))
+}
 
 //2. Create a for loop that adds all numbers of a given array
 //SV: Skapa en for-loop som lägger till alla nummer i en given array
+//hint. hur söker jag upp informationen
 
+const numbers = [1,2,3,4,5];
+let sum = 0;
+for (let i = 0; i < numbers.length; i++){
+    // lägg ihop nummer
+    //sum = numbers[i] // replaces number with new number
+    console.log("INDEX", i, numbers[i])
+    sum = sum + numbers[i]
+}
+
+console.log(sum)
+
+const str = "The quick brown fox jumps over the lazy dog";
+const words = str.split(" ")
+console.log(words)
+const wordToFind = "fox"
+let index = 0
 //3. Create a while loop that takes a long string as seen below and looks for one certain word breaking when it has found it
 //SV: Skapa en while-loop som tar en lång sträng som nedan och letar efter ett visst ord som bryter när den har hittat det ordet
-
 //hint. const wordArray = "some string".split(" ")
 //hint. wordArray.length
+// "The quick brown fox jumps over the lazy dog"
+
+//1. Skapa array av ord och wordToFind
+//2. Skapa while loop
+//3. Skapa condition för när loopen ska stanna
+//4. console log index av words där vi hittar "fox"
 
