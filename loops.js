@@ -84,19 +84,39 @@ for (let i = 0; i < numbers.length; i++){
 
 console.log(sum)
 
-const str = "The quick brown fox jumps over the lazy dog";
-const words = str.split(" ")
-console.log(words)
-const wordToFind = "fox"
-let index = 0
+
 //3. Create a while loop that takes a long string as seen below and looks for one certain word breaking when it has found it
 //SV: Skapa en while-loop som tar en lång sträng som nedan och letar efter ett visst ord som bryter när den har hittat det ordet
 //hint. const wordArray = "some string".split(" ")
 //hint. wordArray.length
 // "The quick brown fox jumps over the lazy dog"
 
-//1. Skapa array av ord och wordToFind
+
+//1. Skapa ord array och sökord index
+const str = "The quick brown fox jumps over the lazy dog";
+const words = str.split(" ")
+const wordToFind = "fox"
+let index = 0
+
 //2. Skapa while loop
-//3. Skapa condition för när loopen ska stanna
-//4. console log index av words där vi hittar "fox"
+while(true) {
+    //2.1 skapa conditional för när loopen måste avslutas
+    if(index >= words.length) {
+        console.log("Word not found")
+        break;
+    }
+    //3. Skapa condition för när loopen ska stanna om vi har hittat rätt ord
+    const currentWord = words[index];
+    if(currentWord === wordToFind){
+        //4. console log index av words där vi hittar "fox"
+        console.log("Word found at:", index)
+        break;
+    }
+    index++;
+}
+
+
+
+
+
 
