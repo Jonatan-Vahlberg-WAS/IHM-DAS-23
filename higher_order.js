@@ -128,5 +128,34 @@ const activeStudents = students.filter(student => {
 console.log("Active students after filtering", activeStudents)
 
 //1. From a array of numbers filter out all numbers that are larger than 100
+//SV: Från en array med nummer filtrera ut alla nummer som är större än 100
+const highNumbers = numbers.filter(nr => nr > 100)
+console.log("Numbers that are larger than 100", highNumbers)
 
 //2. From a array of strings filter out all strings that are longer than 5 characters
+//SV: Från en array med strängar filtrera ut alla strängar som är längre än 5 tecken
+// hint. string.length
+const longFruits = newerFruits.filter(fruit => fruit.length > 5)
+console.log("Fruits with names longer than 5 chars", longFruits)
+
+//FIND
+
+const apple = newerFruits.find(fruit => fruit === "Apple")
+console.log("Apple", apple)
+
+const student9002 = students.find(student => student.id === 9002)
+const student9001 = students.find(student => student.id === 9001)
+console.log("Student with id 9002", student9002)
+console.log("Student with id 9001", student9001)
+if(student9001){
+    console.log("There is a student with that id")
+}
+
+//1. From a array of numbers find the first number that is larger than 100
+//SV: Från en array med nummer hitta det första numret som är större än 100
+
+//2. find the spesific fruit "apple" regardless of case from a array of strings
+//SV: hitta den specifika frukten "apple" oavsett stor eller liten bokstav från en array med strängar
+
+//3. search students for a student name Martin and if no student is found console.log "No student found"
+//SV: sök studenter efter ett studentnamn Martin och om ingen student hittas console.log "No student found"
