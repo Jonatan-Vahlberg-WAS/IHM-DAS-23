@@ -1,6 +1,6 @@
 // FOR EACH
 console.clear()
-const newerFruits = [...newFruits];
+const newerFruits = ["Apple", "Pear", "Bannana", "Orange"];
 console.log(newerFruits)
 const newerReversedFruits = []
 
