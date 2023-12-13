@@ -4,6 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dag 4</title>
+    <style>
+        .product__button {
+            padding: 4px 8px;
+            border-radius: 3px;
+            border: 0;
+            background-color: #3c80ee;
+            color: white;
+            font-size: 18px;
+        }
+        .product__button--clicked {
+            background-color: #275399;
+            pointer-events: none;
+        }
+    </style>
   </head>
   <body>
     <h1 id="title">Dag 4</h1>
@@ -63,20 +77,31 @@
         // Create element
        const productsSimple = [
         0,1,2,3,4,5,6,7,8,9,10
-       ] 
+       ]
+       
+       const productsObj = [
+        { title: "Apple", id: 0},
+        { title: "Orange", id: 1},
+        { title: "Pear", id: 2},
+        { title: "Cherry", id: 3},
+       ]
 
-        function addProductToHtml(product = 0) {
+        function addProductToHtml(product) {
             const productEl = document.createElement("div")
-            productEl.id = `product-${product}`
+            productEl.id = `product-${product.id}`
             productEl.classList.add("product")
 
             const productTitle = document.createElement("h3")
             productTitle.classList.add("product__title")
-            productTitle.textContent = `Product ${product}`
+            productTitle.textContent = product.title
 
             const productButton = document.createElement("button")
             productButton.classList.add("product__button")
             productButton.textContent = "Buy"
+            productButton.addEventListener("click",() => {
+                productButton.textContent = "In cart"
+                productButton.classList.add("product__button--clicked")
+            })
 
             productEl.appendChild(productTitle)
             productEl.appendChild(productButton)
@@ -84,7 +109,7 @@
             products.appendChild(productEl)
         }
 
-        productsSimple.forEach(p => {
+        productsObj.forEach(p => {
             addProductToHtml(p)
         })
 
