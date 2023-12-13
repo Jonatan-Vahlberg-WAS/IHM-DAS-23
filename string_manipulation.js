@@ -60,26 +60,3 @@ const occurences = foundWords.length;
 console.log(words2)
 console.log(trimmedWords)
 console.log(occurences)
-
-const baseCookie = "COOKIE=VALUE"
-console.log(baseCookie.slice(7))
-console.log(baseCookie.split("COOKIE=")[1])
-
-const cookieKey = "hasAcceptedTerms"
-document.cookie = `${cookieKey}=true`
-
-console.log(document.cookie)
-const cookies = document.cookie.split("; ") // Get cookies as an array
-const selectedCookie = cookies.find(cookie => {
-    return cookie.includes(cookieKey)
-})
-const selectedCookieValue = selectedCookie?.split("=")?.[1]
-
-console.log(cookies)
-console.log(selectedCookie)
-console.log(selectedCookieValue, typeof selectedCookieValue)
-if(selectedCookieValue){
-    const interpolatedCookieValue = selectedCookieValue === "true"
-    console.log(interpolatedCookieValue, typeof interpolatedCookieValue)
-}
-
