@@ -1,14 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dag 4</title>
-</head>
-<body>
-   <h1>Dag 4</h1>
-   <!-- <script src="repition_day_3.js"></script> -->
-   <script src="string_manipulation.js"></script>
-   <script src="cookies.js"></script>
-</body>
+  </head>
+  <body>
+    <h1 id="title">Dag 4</h1>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
+      architecto, ratione sequi vero molestias fuga, laborum eaque ex natus
+      consequatur in perspiciatis aliquid animi, ad quos amet officia quam
+      totam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
+      architecto, ratione sequi vero molestias fuga, laborum eaque ex natus
+      consequatur in perspiciatis aliquid animi, ad quos amet officia quam
+      totam!
+    </p>
+    <img src="https://picsum.photos/200/200" />
+    <img src="https://picsum.photos/200/200" />
+    <img src="https://picsum.photos/200/200" />
+    <div class="products">
+
+
+    </div>
+
+    <!-- <script src="repition_day_3.js"></script> -->
+    <!-- <scr src="string_manipulation.js"></scr
+    ipt> -->
+    <!-- <script src="cookies.js"></script> -->
+    <script src="DOM.js"></script>
+    <script>
+        //! Getters
+        // getElementById
+        const title = document.getElementById("title")
+
+        // querySelector
+        const description = document.querySelector(
+            ".description"
+        )
+
+        // querySelectorAll - gives nodelist (a lighter array of html elements)
+        //const products = document.querySelectorAll(".product")
+
+        const products = document.querySelector(".products")
+
+        // getElementsByTagName
+        const images = document.getElementsByTagName("img")
+
+        const imagesArr = Array.from(images)
+
+        // Edit elements
+        if(title){
+            title.textContent = `Dag 4 - ${new Date().toISOString()}`
+            title.style.color = "red"
+        }
+        description.textContent = description.textContent.substring(1,100) + "..."
+
+        imagesArr.forEach((image, index) => {
+            image.style.filter = `grayscale(${index * 50}%)`
+        })
+
+        // Create element
+        /*
+        <div class="product" id="product-1">
+      <h3 class="product__title">Product 1</h3>
+      <button class="product__button">Buy</button>
+    </div>
+        */
+       const productsSimple = [
+        0,1,2,3,4,5,6,7,8,9,10
+       ] 
+
+        function addProductToHtml(product = 0) {
+            const productEl = document.createElement("div")
+            productEl.id = `product-${product}`
+            productEl.classList.add("product")
+
+            const productTitle = document.createElement("h3")
+            productTitle.classList.add("product__title")
+            productTitle.textContent = `Product ${product}`
+
+            const productButton = document.createElement("button")
+            productButton.classList.add("product__button")
+            productButton.textContent = "Buy"
+
+            productEl.appendChild(productTitle)
+            productEl.appendChild(productButton)
+
+            products.appendChild(productEl)
+        }
+
+        productsSimple.forEach(p => {
+            addProductToHtml(p)
+        })
+
+
+    </script>
+  </body>
 </html>
