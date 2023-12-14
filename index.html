@@ -4,50 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 5</title>
-    <style>
-        nav ul {
-            list-style: none;
-            padding: 8px;
-            display: flex;
-            gap: 16px;
-            border: 1px solid gray;
-        }
-
-        nav ul a {
-            text-decoration: none;
-            color: #d65500;
-            padding: 4px 8px;
-        }
-
-        nav ul a:hover {
-            color: #503725;
-        }
-
-        nav ul a.active {
-            background-color: #d65500;
-            color: #fff;
-        }
-
-        .newsletter {
-            background-color: #d65500;
-            padding: 24px 32px;
-        }
-
-        .newsletter {
-            color: #fff;
-            font-weight: 500;
-            font-size: 18px;
-        }
-
-        .newsletter-form #newsletter-email {
-            font-size: 18px;
-            border: 0;
-            padding: 4px 8px;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>Day 5</h1>
+    <h1>Home</h1>
     <p id="description">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga velit illo iste ut optio nostrum accusamus ex cupiditate accusantium ratione voluptatibus inventore ea, sequi, odio obcaecati sint. Obcaecati, est repellat.
     </p>
@@ -57,31 +17,11 @@
         </ul>
     </nav>
     <div class="newsletter">
-        <!-- Newletter script inserts form -->
         <p>Enter your email to recive our newsletter?</p>
-        <form class="newsletter-form">
-            <input
-                name="email"
-                id="newsletter-email"
-                type="email"
-                placeholder="Enter your mail"
-                required
-            >
-            <input
-                name="title"
-                id="newsletter-title"
-                type="text"
-                placeholder="Enter your preferred title"
-            >
-            <button
-                type="submit"
-            >
-                Submit
-            </button>
-        </form>
+        <!-- Newletter script inserts form -->
     </div>
-    <script src="./navbar.js"></script>
     <script src="./newsletter.js"></script>
+    <script src="./navbar.js"></script>
     <!-- <script src="./day_4_repition.js"></script> -->
 </body>
 </html>

@@ -1,0 +1,39 @@
+nav ul {
+    list-style: none;
+    padding: 8px;
+    display: flex;
+    gap: 16px;
+    border: 1px solid gray;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #d65500;
+    padding: 4px 8px;
+}
+
+nav ul a:hover {
+    color: #503725;
+}
+
+nav ul a.active {
+    background-color: #d65500;
+    color: #fff;
+}
+
+.newsletter {
+    background-color: #d65500;
+    padding: 24px 32px;
+}
+
+.newsletter {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.newsletter-form #newsletter-email {
+    font-size: 18px;
+    border: 0;
+    padding: 4px 8px;
+}
