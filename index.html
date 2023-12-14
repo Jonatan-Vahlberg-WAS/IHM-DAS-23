@@ -17,6 +17,16 @@
             background-color: #275399;
             pointer-events: none;
         }
+
+        .clickable {
+            font-size: 20px;
+            margin-top: 32px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 0;
+            background-color: #3c80ee;
+            color: white;
+        }
     </style>
   </head>
   <body>
@@ -37,6 +47,9 @@
 
 
     </div>
+    <button class="clickable">
+        Click me
+    </button>
 
     <!-- <script src="repition_day_3.js"></script> -->
     <!-- <scr src="string_manipulation.js"></scr
@@ -115,15 +128,37 @@
 
         //1. change the background color of the description
         //SV. Ändra bakgrundsfärgen på description
+        description.style.backgroundColor = "limegreen"
 
         //2. change the title case to uppercase
         //SV. Ändra titeln till uppercase
         
-        //3. create a new paragraph with the text "Last updated: today's date"
-        //SV. Skapa en ny paragraf med texten "Last updated: today's date"
+        //Solution 1: styling
+        title.style.textTransform = "uppercase"
+
+        //solution 2: change the text
+        title.textContent = title.textContent.toUpperCase()
+        
+        //3. create a new paragraph with the text "Last updated: today's date" then add it to the document.body
+        //SV. Skapa en ny paragraf med texten "Last updated: today's date" sen lägg till den i document.body
+        const today = new Date()
+        const timestampToday = `${today.getFullYear()} ${today.getMonth()+1} ${today.getDate()}`
+        const lastUpdatedEl = document.createElement("p")
+        lastUpdatedEl.style.fontWeight = 600
+        lastUpdatedEl.textContent = `Last Updated: ${timestampToday}`
+        title.insertAdjacentElement("afterend", lastUpdatedEl)
         
         //4. create a button with the text "Click me" when clicked it changes the text of the title to "I was clicked"
         //SV. Skapa en knapp med texten "Click me" som när den klickas på ändrar titeln till "I was clicked"
+        const clickButton = document.querySelector(".clickable")
+        clickButton.addEventListener("click", (e) => {
+            //solution 1
+            clickButton.textContent = "I was clicked"
+
+            //Solution 2
+            e.target.textContent = "I was clicked"
+        })
+
 
     </script>
   </body>
