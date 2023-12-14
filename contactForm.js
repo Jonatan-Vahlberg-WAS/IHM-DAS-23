@@ -41,10 +41,11 @@ contactFormSubmitBtn.textContent = "Submit"
 
     // Add wrapper to form
     contactForm.appendChild(wrapper)
- })   
+ })
+
 // Listen to form submit event
 contactForm.addEventListener("submit", (e) => {
-    // Prevent default behaviour
+    // Prevent default behaviour which is to refresh the page with query params
     e.preventDefault()
 
     // Get all input fields
@@ -54,6 +55,12 @@ contactForm.addEventListener("submit", (e) => {
     // Loop through all fields and add name and value to data object
     fieldElements.forEach(element => {
         data[element.name] = element.value
+    })
+
+    console.log({
+        type: "submit",
+        subType: "contactForm",
+        data
     })
 })
 
