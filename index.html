@@ -27,6 +27,23 @@
             background-color: #d65500;
             color: #fff;
         }
+
+        .newsletter {
+            background-color: #d65500;
+            padding: 24px 32px;
+        }
+
+        .newsletter {
+            color: #fff;
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        .newsletter-form #newsletter-email {
+            font-size: 18px;
+            border: 0;
+            padding: 4px 8px;
+        }
     </style>
 </head>
 <body>
@@ -34,14 +51,37 @@
     <p id="description">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga velit illo iste ut optio nostrum accusamus ex cupiditate accusantium ratione voluptatibus inventore ea, sequi, odio obcaecati sint. Obcaecati, est repellat.
     </p>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/contact-us.html">Contact us</a></li>
-            <li><a href="/directions.html">Directions</a></li>
+    <nav id="navbar">
+        <ul id="navbar-list">
+            <!-- Navbar script inserts nav elements  -->
         </ul>
     </nav>
-    <script src="./day_4_repition.js"></script>
+    <div class="newsletter">
+        <!-- Newletter script inserts form -->
+        <p>Enter your email to recive our newsletter?</p>
+        <form class="newsletter-form">
+            <input
+                name="email"
+                id="newsletter-email"
+                type="email"
+                placeholder="Enter your mail"
+                required
+            >
+            <input
+                name="title"
+                id="newsletter-title"
+                type="text"
+                placeholder="Enter your preferred title"
+            >
+            <button
+                type="submit"
+            >
+                Submit
+            </button>
+        </form>
+    </div>
+    <script src="./navbar.js"></script>
+    <script src="./newsletter.js"></script>
+    <!-- <script src="./day_4_repition.js"></script> -->
 </body>
 </html>

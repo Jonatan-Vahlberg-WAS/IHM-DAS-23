@@ -48,23 +48,5 @@ console.log(correctFileNames2)
  // updating elements
 const title = document.getElementById("title")
 const description = document.getElementById("description")
-const navLinks = document.querySelectorAll("nav ul a") //Returns node list 
- /// Styling
- const pathname = document.location.pathname 
-navLinks.forEach(link => {
- console.log(link.textContent)
- link.textContent = link.textContent.toUpperCase()
-
- const linkHref = link.getAttribute("href")
- 
- console.log(linkHref, pathname)
- if(linkHref === pathname) {
-     link.classList.add("active")
- }
- if(linkHref === "/"){
-     link.textContent = "⌂"
- }
-})
-
 
  // Creating elements
