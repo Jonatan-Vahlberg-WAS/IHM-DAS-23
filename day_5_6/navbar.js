@@ -4,10 +4,10 @@ const navBarList = document.querySelector("#navbar #navbar-list");
 
 const links = [
     { title: "Home", href: "/"},
-    { title: "About", href: "/about.html"},
-    { title: "Contact", href: "/contact.html"},
-    { title: "Directions", href: "/directions.html"},
-    { title: "Menu", href: "/menu.html"},
+    { title: "About", href: "/day_5_6/about.html"},
+    { title: "Contact", href: "/day_5_6/contact.html"},
+    { title: "Directions", href: "/day_5_6/directions.html"},
+    { title: "Menu", href: "/day_5_6/menu.html"},
 ]
 
 //Creating elemnts
