@@ -14,18 +14,6 @@ const dataLayerModelClick = {
 
 //CLICK event
 
-//GEOLOCATION event
-
-const dataLayerModelGeoLocaation = {
-    event: "geoLocation",
-    eventType: "geoLocation",
-    indentifier: null,
-    data: {
-        location: "54.90297392397, 18.82738738",
-        timestamp: 12323872738278,
-    }
-}
-
 const courseCTAs = document.querySelectorAll(".cta-course")
 console.log("c", courseCTAs)
 
@@ -69,12 +57,58 @@ courseCTAs.forEach(courseCTA => {
     })
     
 })
-const limit = 100;
+const limit = 5;
 for(var i = 0; i < limit; i++) {
     let randomNumber = Math.floor(Math.random() * 3);
     console.log(courseCTAs[randomNumber]) // This will produce 0, 1, or 2
     courseCTAs[randomNumber].click()
 }
 
+//GEOLOCATION event
 
-//NAVIGATION event
+const dataLayerModelGeoLocaation = {
+    event: "geoLocation",
+    eventType: "geoLocation",
+    indentifier: null,
+    data: {
+        location: "54.90297392397, 18.82738738",
+        timestamp: new Date().toISOString(),
+    }
+}
+
+//GEO-location
+const geolocation = navigator.geolocation;
+
+
+geo.getCurrentPosition((position) => {
+    const event = {
+        event: "geolocation",
+        eventType: "geolocation",
+        indentifier: null,
+        data: {
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+            timestamp: new Date(position.timestamp).toISOString()
+        }
+    }
+
+    addToDataLayer(event)
+}, (positionError) => {
+    const event = {
+        event: "geolocation",
+        eventType: "geolocationError",
+        indentifier: null,
+        data: {
+            timestamp: new Date().toISOString(),
+            code: positionError.code,
+            message: positionError.message
+        }
+    }
+    addToDataLayer(event)
+})
+
+//FORM SUBMISSION event
+// Find news letter form
+// listen to submit event
+// get relevant data for event
+// add evernt to datalayer

@@ -21,17 +21,8 @@ else {
 const geo = navigator.geolocation;
 
 
-
-function getCurrentPositionSuccess(position){
-
-}
-
-function getCurrentPositionError() {
-
-}
-
 geo.getCurrentPosition((position) => {
-    console.log("Has given location permissions", position)
+    // console.log("Has given location permissions", position)
 }, (positionError) => {
-    console.log("Has not given location permissions", positionError)
+    // console.log("Has not given location permissions", positionError)
 })
