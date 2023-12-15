@@ -107,8 +107,45 @@ geo.getCurrentPosition((position) => {
     addToDataLayer(event)
 })
 
+
+
 //FORM SUBMISSION event
+
+const dataLayerModelFormSubmission = {
+    event: "submit form",
+    eventType: "newsletter - submit form",
+    indentifier: "form...",
+    data: {
+        values: {
+
+        },
+        timestamp: new Date().toISOString(),
+    }
+}
+
 // Find news letter form
+const newsletterFormDl = document.querySelector(".newsletter form")
+
 // listen to submit event
-// get relevant data for event
-// add evernt to datalayer
+newsletterFormDl.addEventListener("submit", (e) => {
+    const target = e.target;
+
+    const emailInput = e.target.querySelector("#newsletter-email")
+
+    const event = {
+        event: "submit form",
+        eventType: "newsletter - submit form",
+        indentifier: getIdentifier(target),
+        data: {
+            timestamp: new Date().toISOString(),
+            // get relevant data for event
+            // get email from form
+            values: {
+                email: emailInput.value       
+            }
+        }
+    }
+
+    // add evernt to datalayer
+    addToDataLayer(event)
+})
