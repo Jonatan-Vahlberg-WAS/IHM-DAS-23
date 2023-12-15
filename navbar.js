@@ -1,5 +1,4 @@
 
-console.clear()
 const websitePathname = document.location.pathname;
 const navBarList = document.querySelector("#navbar #navbar-list");
 
