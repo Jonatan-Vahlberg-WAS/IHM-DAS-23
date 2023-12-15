@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MCVCTK3H');</script>
+    })(window,document,'script','dataLayer','GTM-MCVCTK3H');</script> -->
     <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day 5</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
     <h1>Home</h1>
     <p id="description">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga velit illo iste ut optio nostrum accusamus ex cupiditate accusantium ratione voluptatibus inventore ea, sequi, odio obcaecati sint. Obcaecati, est repellat.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga velit illo
+      iste ut optio nostrum accusamus ex cupiditate accusantium ratione
+      voluptatibus inventore ea, sequi, odio obcaecati sint. Obcaecati, est
+      repellat.
     </p>
     <nav id="navbar">
-        <ul id="navbar-list">
-            <!-- Navbar script inserts nav elements  -->
-        </ul>
+      <ul id="navbar-list">
+        <!-- Navbar script inserts nav elements  -->
+      </ul>
     </nav>
     <div class="newsletter">
-        <p>Enter your email to recive our newsletter?</p>
-        <!-- Newletter script inserts form -->
+      <p>Enter your email to recive our newsletter?</p>
+      <!-- Newletter script inserts form -->
     </div>
 
-    <button
-        id="cta-new-course"
-        data-course="6756"
+    <button 
+        class="cta-course" 
+        id="cta-course-899" 
+        data-course="899"
     >
-        CTA - New course
+    New course only $99
+    </button>
+     <button 
+        class="cta-course" 
+        id="cta-course-1200" 
+        data-course="1200"
+    >
+    New course only $120
+    </button>
+     <button 
+        class="cta-course" 
+        id="cta-course-1800" 
+        data-course="1800"
+    >
+    New course only $180
     </button>
     <script src="./newsletter.js"></script>
     <script src="./navbar.js"></script>
     <script src="./BOM.js"></script>
-</body>
+    <script src="./datalayer.js"></script>
+  </body>
 </html>
